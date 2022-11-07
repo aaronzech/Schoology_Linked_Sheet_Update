@@ -26,4 +26,9 @@ Have the following Python libraries installed.
  2) Run the python script
  3) Select the parent access code csv file when the program prompts for it.
  4) Open the Google Sheet
- 5) Fromat the Buidling ID column to a number format
+ 
+ ![](https://github.com/aaronzech/images/blob/main/Screenshot_242.png)
+
+ 5) Format the Buidling ID column to a number format. Optional run the macro to do this.
+ 6) 
+ ![](https://github.com/aaronzech/images/blob/main/Screenshot_243.png)
