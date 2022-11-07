@@ -30,5 +30,5 @@ Have the following Python libraries installed.
  ![](https://github.com/aaronzech/images/blob/main/Screenshot_242.png)
 
  5) Format the Buidling ID column to a number format. Optional run the macro to do this.
- 6) 
+ 
  ![](https://github.com/aaronzech/images/blob/main/Screenshot_243.png)
