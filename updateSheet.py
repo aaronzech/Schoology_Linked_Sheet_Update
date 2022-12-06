@@ -50,8 +50,7 @@ time.sleep(5) # Delay for reliablility
 clearSheet(sh)
 time.sleep(5) # Delay for reliablility 
 insertSchoologyData(sh)
-time.sleep(5) # Delay for reliablility
-print("Data Added to Sheet") 
+time.sleep(5) # Delay for reliablility 
 addLastUpdate(sh,date)
 addParentLink(sh)
 addParentResources(sh)
