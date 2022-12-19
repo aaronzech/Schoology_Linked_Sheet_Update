@@ -2,6 +2,8 @@
 # https://docs.google.com/spreadsheets/d/1Ah3sU0UHcIdBi7-0TzxXKkiwHZbP7IbEgRJt0Ujqoxs/edit#gid=0
 # The script will delete the current sheet, and paste in new data from the downloaded CSV parent access code file from Schoology.com
 
+# Sometimes makes a new sheet 12/19/22
+
 import gspread
 import tkinter as tk
 from tkinter import filedialog
@@ -15,6 +17,7 @@ import time
 def clearSheet(sh):
     worksheet = sh.sheet1;
     worksheet.clear()
+    print("***Sheet Cleared***")
 
 def insertSchoologyData(sh):
     print("Select Schoology Parent Access Code file")
@@ -23,7 +26,9 @@ def insertSchoologyData(sh):
     print("File:",file)
     worksheet = sh.sheet1;
     print(sh.id)
+    time.sleep(2);
     wks = d2g.upload(dataframe,gfile=sh.id, wks_name='ALL_CODES',row_names=False) #made a new spreadsheet
+    print("Data added to sheet",wks)
 
 # J1 = "Last update"
 # K2 = "Date"
@@ -44,13 +49,14 @@ def addParentResources(sh):
 gc = gspread.service_account()
 #sh = gc.open("Schoology Parent Access Codes") #Name of Google Sheet
 sh = gc.open_by_url('https://docs.google.com/spreadsheets/d/1Ah3sU0UHcIdBi7-0TzxXKkiwHZbP7IbEgRJt0Ujqoxs/')
+time.sleep(5) # Delay for reliablility 
 today = date.today()
 date = today.strftime("%m/%d/%y")
-time.sleep(5) # Delay for reliablility 
+time.sleep(10) # Delay for reliablility 
 clearSheet(sh)
-time.sleep(5) # Delay for reliablility 
+time.sleep(10) # Delay for reliablility 
 insertSchoologyData(sh)
-time.sleep(5) # Delay for reliablility 
+time.sleep(10) # Delay for reliablility 
 addLastUpdate(sh,date)
 addParentLink(sh)
 addParentResources(sh)
