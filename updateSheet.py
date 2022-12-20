@@ -17,6 +17,7 @@ import time
 def clearSheet(sh):
     worksheet = sh.sheet1;
     worksheet.clear()
+    time.sleep(5) # Delay for reliablility 
     print("***Sheet Cleared***")
 
 def insertSchoologyData(sh):
@@ -26,7 +27,7 @@ def insertSchoologyData(sh):
     print("File:",file)
     worksheet = sh.sheet1;
     print(sh.id)
-    time.sleep(2);
+    time.sleep(5);
     wks = d2g.upload(dataframe,gfile=sh.id, wks_name='ALL_CODES',row_names=False) #made a new spreadsheet
     print("Data added to sheet",wks)
 
@@ -49,7 +50,7 @@ def addParentResources(sh):
 gc = gspread.service_account()
 #sh = gc.open("Schoology Parent Access Codes") #Name of Google Sheet
 sh = gc.open_by_url('https://docs.google.com/spreadsheets/d/1Ah3sU0UHcIdBi7-0TzxXKkiwHZbP7IbEgRJt0Ujqoxs/')
-time.sleep(5) # Delay for reliablility 
+time.sleep(10) # Delay for reliablility 
 today = date.today()
 date = today.strftime("%m/%d/%y")
 time.sleep(10) # Delay for reliablility 
