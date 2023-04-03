@@ -24,7 +24,7 @@ Have the following Python libraries installed.
  ![](https://github.com/aaronzech/images/blob/main/Screenshot_241.png)
  
  2) Run the python script
- 3) Select the parent access code csv file when the program prompts for it.
+ 3) The program will look for the most recent 'parent-code-export' file in the Downloads directory.
  4) Open the Google Sheet
  
  ![](https://github.com/aaronzech/images/blob/main/Screenshot_242.png)
